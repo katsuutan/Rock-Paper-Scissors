@@ -67,5 +67,14 @@
 
     }
     
+    //runs 5 rounds of rock, paper, scissors. Asks the user each time for the prompt. Does not account for user error if user does not input the correct choice.
+    function game() {
+        for (let count = 0; count < 5; count++) {
+            console.log(playRound(prompt('Type your choice of: rock, paper or scissors', ''), getComputerChoice()));
+        }
+    }
+
+    game();
+
 </script>
 </html>
