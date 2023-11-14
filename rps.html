@@ -22,7 +22,50 @@
             return 0;
     }
 
-    
+    // Takes the choices of player and computer to compare and declare a winner.
+    function playRound(playerSelection, computerSelection) {
+        //Change players choice to be lowercase
+        //If playerSelection is xxx, compare with computerSelection's xxx.
+        //Returns string that declares winner.
+        playerSelection = playerSelection.toLowerCase();
+
+        if (playerSelection === 'rock') {
+            if (computerSelection === 'Rock')
+                return 'It is a tie! Too many rocks.';
+            else if (computerSelection === 'Paper')
+                return 'You Lose! Paper beats Rock.';
+            else if (computerSelection === 'Scissors')
+                return 'You Win! Rock beats Scissors.';
+            else
+                return 0;
+        }
+
+        else if (playerSelection === 'paper') {
+            if (computerSelection === 'Rock')
+                return 'You Win! Paper beats Rock.';
+            else if (computerSelection === 'Paper')
+                return 'It is a tie! Paper wasted';
+            else if (computerSelection === 'Scissors')
+                return 'You Lose! Scissors beat Paper.';
+            else
+                return 0;
+        }
+
+        else if (playerSelection === 'scissors') {
+            if (computerSelection === 'Rock')
+                return 'You Lose! Rock beats Scissors';
+            else if (computerSelection === 'Paper')
+                return 'You Win! Scissors beat Rock.';
+            else if (computerSelection === 'Scissors')
+                return 'It is a tie! Scissors..o///o';
+            else
+                return 0;
+        }
+        
+        else
+            return 0;
+
+    }
     
 </script>
 </html>
